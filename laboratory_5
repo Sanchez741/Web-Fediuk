@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Олександр Федюк — портфоліо</title>
+  <style>
+    :root {
+      --ink: #21243d;
+      --muted: #586675;
+      --accent: #ff6464;
+      --pale: #edf7fa;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: white;
+      font: 16px/1.5 Arial, sans-serif;
+    }
+    a { color: inherit; }
+    a:hover { color: #ad3838; }
+    a:focus-visible { outline: 3px solid #197493; outline-offset: 4px; }
+    .wrap { width: min(856px, calc(100% - 40px)); margin: 0 auto; }
+
+    nav {
+      max-width: 1152px;
+      margin: auto;
+      padding: 24px 5%;
+      display: flex;
+      justify-content: flex-end;
+      gap: 32px;
+    }
+    nav a { font-size: 18px; font-weight: 700; text-decoration: none; }
+
+    .intro {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 55px;
+      padding: 90px 0 70px;
+    }
+    .intro h1 { margin: 0 0 20px; font-size: 44px; line-height: 1.2; }
+    .intro p { max-width: 490px; margin: 0 0 28px; }
+    .portrait {
+      width: 240px;
+      height: 240px;
+      flex: none;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 60%;
+      box-shadow: -6px 10px var(--pale);
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      color: #21243d;
+      background: var(--accent);
+      border-radius: 3px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .button:hover { background: #ff8585; color: var(--ink); }
+
+    .posts { padding: 20px 0 32px; background: var(--pale); }
+    .section-title { margin: 0 0 16px; font-size: 22px; font-weight: 400; }
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .card { background: white; border-radius: 4px; padding: 24px; }
+    .card h3, .work h3 { margin: 0 0 10px; line-height: 1.25; }
+    .card h3 { font-size: 25px; }
+    .card p, .work p { margin: 10px 0 0; }
+    .meta { color: var(--muted); }
+
+    .works { padding: 28px 0 40px; }
+    .work {
+      display: grid;
+      grid-template-columns: 230px 1fr;
+      align-items: start;
+      gap: 22px;
+      padding: 20px 0;
+      border-bottom: 1px solid #ddd;
+    }
+    .work h3 { font-size: 28px; }
+    .year {
+      display: inline-block;
+      margin-right: 12px;
+      padding: 1px 10px;
+      border-radius: 16px;
+      color: white;
+      background: #142850;
+      font-weight: 700;
+    }
+    .preview {
+      height: 145px;
+      border-radius: 6px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+    .preview svg { width: 88%; height: 82%; }
+    .video { background: #222737; }
+    .keyboard { background: #d6e9e7; }
+    .planner { background: #f6e5d7; }
+
+    footer { padding: 36px 20px; text-align: center; }
+    footer a { margin: 0 10px; }
+    footer p { margin-bottom: 0; font-size: 14px; }
+
+    @media (max-width: 650px) {
+      nav { justify-content: center; gap: 20px; padding: 18px 12px; }
+      nav a { font-size: 16px; }
+      .intro {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 32px;
+        padding: 35px 0 48px;
+        text-align: center;
+      }
+      .portrait { width: 175px; height: 175px; }
+      .intro h1 { font-size: 32px; }
+      .cards, .work { grid-template-columns: 1fr; }
+      .section-title { text-align: center; }
+      .preview { height: 180px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav aria-label="Навігація портфоліо">
+      <a href="#works">Роботи</a>
+      <a href="#posts">Дописи</a>
+      <a href="#contact">Контакти</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap intro">
+      <div>
+        <h1>Привіт, я Олександр Федюк</h1>
+        <p>Навчаюся на четвертому курсі за спеціальністю «Комп’ютерна
+          інженерія». Тут зібрав свої роботи з веброзробки — від верстки
+          клавіатури до сторінки відеосервісу.</p>
+        <a class="button" download="Oleksandr-Fediuk-CV.txt"
+           href="data:text/plain;charset=utf-8,Олександр%20Федюк%0AСпеціальність:%20Комп’ютерна%20інженерія,%204%20курс.%0AДосвід:%20рекрутинг%20в%20автосервісі%20«Рись».%0AНавички:%20HTML,%20CSS,%20Flexbox.%0AКонтакт:%20st7308060@stud.duikt.edu.ua">
+          Завантажити резюме
+        </a>
+      </div>
+      <img class="portrait" src="photo1.jpg" alt="Олександр Федюк">
+    </section>
+
+    <section class="posts" id="posts">
+      <div class="wrap">
+        <h2 class="section-title">Останні дописи</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Як побудована сторінка відеосервісу</h3>
+            <div class="meta">Веброзробка · Flexbox</div>
+            <p>Шапка, бічне меню і стрічка відео займають різну кількість
+              місця. Flexbox допомагає розташувати їх так, щоб меню зберігало
+              ширину, а стрічка заповнювала решту екрана.</p>
+          </article>
+          <article class="card">
+            <h3>Що змінюється на екрані телефона</h3>
+            <div class="meta">Верстка · Адаптивний дизайн</div>
+            <p>На широкому екрані дві картки зручно читати поруч. На вузькому
+              кожна отримує окремий рядок, а фото у вступі переходить над
+              заголовком.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap works" id="works">
+      <h2 class="section-title">Вибрані роботи</h2>
+
+      <article class="work">
+        <div class="preview video" aria-hidden="true">
+          <svg viewBox="0 0 200 110" fill="none">
+            <rect x="4" y="6" width="192" height="98" rx="5" fill="#fafafa"/>
+            <rect x="4" y="6" width="192" height="16" rx="4" fill="#dddfe5"/>
+            <circle cx="15" cy="14" r="4" fill="#ed5555"/>
+            <path d="M14 32h27m-27 10h21m-21 10h25" stroke="#bbc2cc" stroke-width="4"/>
+            <rect x="54" y="30" width="63" height="38" rx="3" fill="#637da9"/>
+            <rect x="124" y="30" width="63" height="38" rx="3" fill="#ef9279"/>
+            <path d="m80 41 15 8-15 8z" fill="white"/>
+            <path d="M55 77h52m17 0h51M55 86h33m36 0h30" stroke="#a7adbb" stroke-width="4"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Головна сторінка відеосервісу</h3>
+          <span class="year">2026</span><span class="meta">HTML, Flexbox</span>
+          <p>Навчальна верстка за структурою YouTube з верхньою панеллю,
+            бічною навігацією та картками відео.</p>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="preview keyboard" aria-hidden="true">
+          <svg viewBox="0 0 200 110">
+            <defs>
+              <pattern id="keys" width="15" height="15" patternUnits="userSpaceOnUse">
+                <rect x="1" y="1" width="12" height="11" rx="2" fill="#edf4ed"/>
+              </pattern>
+            </defs>
+            <rect x="3" y="22" width="194" height="70" rx="7" fill="#365150"/>
+            <rect x="9" y="28" width="181" height="44" fill="url(#keys)"/>
+            <rect x="45" y="75" width="83" height="10" rx="2" fill="#e3ac76"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Повнорозмірна клавіатура</h3>
+          <span class="year">2026</span><span class="meta">CSS</span>
+          <p>Макет клавіатури з основним і цифровим блоками. Ширина пробілу,
+            Enter та інших службових клавіш передає пропорції справжньої клавіатури.</p>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="preview planner" aria-hidden="true">
+          <svg viewBox="0 0 200 110">
+            <rect x="30" y="5" width="140" height="100" rx="5" fill="white"/>
+            <rect x="30" y="5" width="140" height="19" rx="4" fill="#b76b51"/>
+            <path d="M42 42h116M42 59h116M42 76h116M65 30v61m24-61v61m24-61v61m24-61v61"
+                  stroke="#d9c9bc" stroke-width="2"/>
+            <rect x="91" y="44" width="19" height="12" rx="2" fill="#ebb68e"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Навчальний планер</h3>
+          <span class="year">2026</span><span class="meta">Інтерфейс</span>
+          <p>Сторінка планера для навчальних справ. Поділ на окремі поля
+            допомагає побачити розклад і знайти потрібний запис.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <a href="mailto:st7308060@stud.duikt.edu.ua">Написати мені</a>
+    <a href="index.html">На головну сайту</a>
+    <p>© 2026 Олександр Федюк</p>
+  </footer>
+</body>
+</html>
